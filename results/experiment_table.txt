@@ -1,0 +1,17 @@
+config: {'n': 200, 'seeds': 3, 'rate': 16, 'duration': 30.0, 'outage': [5, 9], 'out': 'results/experiment.json', 'skip_matrix': False}
+
+SINGLE FAULT AT 30% (200 requests each): success / attempts per request / p99 s
+fault     no_retry                      immediate_x4                  backoff_x4                    backoff_x4+budget             
+http429   0.700 / 1.00 / 0.33           0.995 / 1.42 / 0.33           1.000 / 1.43 / 0.41           0.810 / 1.15 / 0.37           
+http500   0.700 / 1.00 / 0.33           0.990 / 1.42 / 1.31           0.990 / 1.42 / 1.47           0.810 / 1.15 / 0.74           
+hang      0.700 / 1.00 / 1.00           0.990 / 1.42 / 3.17           0.995 / 1.42 / 3.51           0.810 / 1.15 / 2.15           
+truncate  0.700 / 1.00 / 0.34           0.990 / 1.42 / 1.31           0.995 / 1.42 / 1.48           0.810 / 1.15 / 0.75           
+garbage   1.000 / 1.00 / 0.33           0.990 / 1.42 / 1.31           0.990 / 1.42 / 1.48           0.810 / 1.15 / 0.75           
+
+RETRY STORM (offered 16 req/s, capacity 25/s, outage s5-9): per seed
+no_retry             success [0.89, 0.841, 0.853] | amplification [1.0, 1.0, 1.0] | peak arrivals/s [22, 27, 24] | recovery_s [0, 0, 0]
+immediate_x4         success [0.155, 0.17, 0.132] | amplification [3.53, 3.49, 3.6] | peak arrivals/s [77, 73, 80] | recovery_s [None, None, None]
+backoff_x4           success [0.155, 0.17, 0.132] | amplification [3.53, 3.49, 3.6] | peak arrivals/s [73, 77, 80] | recovery_s [None, None, None]
+backoff_x4+budget    success [0.89, 0.843, 0.853] | amplification [1.05, 1.06, 1.05] | peak arrivals/s [29, 30, 34] | recovery_s [0, 0, 0]
+
+success fraction per arrival second, immediate_x4 seed 0: [1.0, 1.0, 1.0, 1.0, 0.94, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]

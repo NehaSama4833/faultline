@@ -1,0 +1,6 @@
+#!/bin/sh
+# Reject any co-author trailer: every commit in this repo has a single author.
+if grep -qiE "^co-authored-by:" "$1"; then
+  echo "Blocked: remove the Co-authored-by trailer." >&2
+  exit 1
+fi

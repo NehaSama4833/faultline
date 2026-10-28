@@ -1,0 +1,32 @@
+{'fault': 'http429', 'policy': 'no_retry', 'success': 0.7, 'attempts': 1.0, 'p50': 0.3278679890000262, 'p99': 0.3310187659999997}
+{'fault': 'http429', 'policy': 'immediate_x4', 'success': 0.995, 'attempts': 1.42, 'p50': 0.32841228199998795, 'p99': 0.33127079900003764}
+{'fault': 'http429', 'policy': 'backoff_x4', 'success': 1.0, 'attempts': 1.425, 'p50': 0.32768026899998404, 'p99': 0.41175075000001016}
+{'fault': 'http429', 'policy': 'backoff_x4+budget', 'success': 0.81, 'attempts': 1.15, 'p50': 0.32705789800002094, 'p99': 0.3723948570000175}
+{'fault': 'http500', 'policy': 'no_retry', 'success': 0.7, 'attempts': 1.0, 'p50': 0.3275470159999827, 'p99': 0.3298528700000247}
+{'fault': 'http500', 'policy': 'immediate_x4', 'success': 0.99, 'attempts': 1.415, 'p50': 0.328266516000042, 'p99': 1.309793027000012}
+{'fault': 'http500', 'policy': 'backoff_x4', 'success': 0.99, 'attempts': 1.415, 'p50': 0.3280790109999998, 'p99': 1.4749040300000047}
+{'fault': 'http500', 'policy': 'backoff_x4+budget', 'success': 0.81, 'attempts': 1.15, 'p50': 0.3279913499999907, 'p99': 0.7449743439999565}
+{'fault': 'hang', 'policy': 'no_retry', 'success': 0.7, 'attempts': 1.0, 'p50': 0.1230898830000342, 'p99': 1.0039132280000445}
+{'fault': 'hang', 'policy': 'immediate_x4', 'success': 0.99, 'attempts': 1.415, 'p50': 0.12261660600000823, 'p99': 3.166304239999988}
+{'fault': 'hang', 'policy': 'backoff_x4', 'success': 0.995, 'attempts': 1.42, 'p50': 0.12267027600000802, 'p99': 3.509020591999956}
+{'fault': 'hang', 'policy': 'backoff_x4+budget', 'success': 0.81, 'attempts': 1.15, 'p50': 0.1220000490000075, 'p99': 2.1467727510000145}
+{'fault': 'truncate', 'policy': 'no_retry', 'success': 0.7, 'attempts': 1.0, 'p50': 0.32812243099999705, 'p99': 0.3368493749999857}
+{'fault': 'truncate', 'policy': 'immediate_x4', 'success': 0.99, 'attempts': 1.415, 'p50': 0.32931993600004716, 'p99': 1.3148931709999943}
+{'fault': 'truncate', 'policy': 'backoff_x4', 'success': 0.995, 'attempts': 1.42, 'p50': 0.3280911040000092, 'p99': 1.4762686089999306}
+{'fault': 'truncate', 'policy': 'backoff_x4+budget', 'success': 0.81, 'attempts': 1.15, 'p50': 0.32845406000001276, 'p99': 0.7531334699999661}
+{'fault': 'garbage', 'policy': 'no_retry', 'success': 1.0, 'attempts': 1.0, 'p50': 0.32826478499998757, 'p99': 0.33064945700004955}
+{'fault': 'garbage', 'policy': 'immediate_x4', 'success': 0.99, 'attempts': 1.415, 'p50': 0.328928741000027, 'p99': 1.312983896999981}
+{'fault': 'garbage', 'policy': 'backoff_x4', 'success': 0.99, 'attempts': 1.415, 'p50': 0.32801950799989754, 'p99': 1.4770954850000635}
+{'fault': 'garbage', 'policy': 'backoff_x4+budget', 'success': 0.81, 'attempts': 1.15, 'p50': 0.3284683970000515, 'p99': 0.7456302929999765}
+{'policy': 'no_retry', 'seed': 0, 'recovery_s': 0, 'overall_success': 0.8900862068965517, 'server_received': 464, 'logical': 464, 'amplification': 1.0, 'peak_arrivals_per_s': 22}
+{'policy': 'immediate_x4', 'seed': 0, 'recovery_s': None, 'overall_success': 0.15517241379310345, 'server_received': 1640, 'logical': 464, 'amplification': 3.5344827586206895, 'peak_arrivals_per_s': 77}
+{'policy': 'backoff_x4', 'seed': 0, 'recovery_s': None, 'overall_success': 0.15517241379310345, 'server_received': 1640, 'logical': 464, 'amplification': 3.5344827586206895, 'peak_arrivals_per_s': 73}
+{'policy': 'backoff_x4+budget', 'seed': 0, 'recovery_s': 0, 'overall_success': 0.8900862068965517, 'server_received': 487, 'logical': 464, 'amplification': 1.0495689655172413, 'peak_arrivals_per_s': 29}
+{'policy': 'no_retry', 'seed': 1, 'recovery_s': 0, 'overall_success': 0.8405797101449275, 'server_received': 483, 'logical': 483, 'amplification': 1.0, 'peak_arrivals_per_s': 27}
+{'policy': 'immediate_x4', 'seed': 1, 'recovery_s': None, 'overall_success': 0.16977225672877846, 'server_received': 1686, 'logical': 483, 'amplification': 3.4906832298136647, 'peak_arrivals_per_s': 73}
+{'policy': 'backoff_x4', 'seed': 1, 'recovery_s': None, 'overall_success': 0.16977225672877846, 'server_received': 1686, 'logical': 483, 'amplification': 3.4906832298136647, 'peak_arrivals_per_s': 77}
+{'policy': 'backoff_x4+budget', 'seed': 1, 'recovery_s': 0, 'overall_success': 0.8426501035196687, 'server_received': 510, 'logical': 483, 'amplification': 1.0559006211180124, 'peak_arrivals_per_s': 30}
+{'policy': 'no_retry', 'seed': 2, 'recovery_s': 0, 'overall_success': 0.8531317494600432, 'server_received': 463, 'logical': 463, 'amplification': 1.0, 'peak_arrivals_per_s': 24}
+{'policy': 'immediate_x4', 'seed': 2, 'recovery_s': None, 'overall_success': 0.13174946004319654, 'server_received': 1669, 'logical': 463, 'amplification': 3.6047516198704104, 'peak_arrivals_per_s': 80}
+{'policy': 'backoff_x4', 'seed': 2, 'recovery_s': None, 'overall_success': 0.13174946004319654, 'server_received': 1669, 'logical': 463, 'amplification': 3.6047516198704104, 'peak_arrivals_per_s': 80}
+{'policy': 'backoff_x4+budget', 'seed': 2, 'recovery_s': 0, 'overall_success': 0.8531317494600432, 'server_received': 486, 'logical': 463, 'amplification': 1.0496760259179265, 'peak_arrivals_per_s': 34}
