@@ -16,7 +16,7 @@ Retry guidance is well known: exponential backoff with jitter, honour `Retry-Aft
 ```bash
 python3 -m venv .venv && .venv/bin/pip install -e '.[dev]'
 .venv/bin/pytest -q                                              # 15 tests
-.venv/bin/python -m faultline.experiment --seeds 3 --duration 30 # about 13 min
+.venv/bin/python -m faultline.experiment --seeds 3 --duration 30 # roughly 10-15 min
 .venv/bin/python -m faultline.report results/experiment.json
 ```
 
